@@ -26,17 +26,7 @@ states = {'OH': 'Ohio', 'KY': 'Kentucky', 'AS': 'American Samoa', 'NV': 'Nevada'
 
 
 def get_list_of_university_towns():
-    '''Returns a DataFrame of towns and the states they are in from the
-    university_towns.txt list. The format of the DataFrame should be:
-    DataFrame( [ ["Michigan", "Ann Arbor"], ["Michigan", "Yipsilanti"] ],
-    columns=["State", "RegionName"]  )
-
-    The following cleaning needs to be done:
-
-    1. For "State", removing characters from "[" to the end.
-    2. For "RegionName", when applicable, removing every character from " (" to the end.
-    3. Depending on how you read the data, you may need to remove newline character '\n'. '''
-
+    
     df_uni_town = pd.read_csv('university_towns.txt', header=None, error_bad_lines=False)
     df = pd.DataFrame({'State': [], 'RegionName': []} )
     # print(df)
@@ -198,15 +188,4 @@ def get_recession_bottom():
 print(get_recession_bottom())
 
 def convert_housing_data_to_quarters():
-    '''Converts the housing data to quarters and returns it as mean
-    values in a dataframe. This dataframe should be a dataframe with
-    columns for 2000q1 through 2016q3, and should have a multi-index
-    in the shape of ["State","RegionName"].
-
-    Note: Quarters are defined in the assignment description, they are
-    not arbitrary three month periods.
-
-    The resulting dataframe should have 67 columns, and 10,730 rows.
-    '''
-
     return "ANSWER"
